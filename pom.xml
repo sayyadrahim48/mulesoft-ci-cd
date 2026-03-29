@@ -35,7 +35,7 @@
 						<environment>Sandbox</environment>
 						<target>Cloudhub-US-East-2</target>
 						<!-- This is the Space/Region -->
-						<muleVersion>4.6.0</muleVersion>
+						<muleVersion>4.7.0</muleVersion>
 						<applicationName>mule-ci-cd</applicationName>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
