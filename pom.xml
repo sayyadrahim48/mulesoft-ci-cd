@@ -25,17 +25,20 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<cloudHubDeployment>
+					<cloudhub2Deployment>
 						<uri>https://anypoint.mulesoft.com</uri>
+						<provider>MC</provider>
+						<environment>Sandbox</environment>
+						<target>CloudHub-US-East-2</target>
+						<!-- This is the Space/Region -->
+						<muleVersion>4.7.0</muleVersion>
+						<applicationName>mule-ci-cd</applicationName>
+						<replicas>1</replicas>
+						<vCores>0.1</vCores>
+						<!-- Authentication details here -->
 						<username>rahimsuae86</username>
 						<password>Emirates@2026</password>
-						<muleVersion>4.7.0</muleVersion>
-						<environment>Sandbox</environment>
-						<applicationName>mule-ci-cd</applicationName>
-						<workerType>Micro</workerType>
-						<workers>1</workers>
-						<objectStoreV2>true</objectStoreV2>
-					</cloudHubDeployment>
+					</cloudhub2Deployment>
 				</configuration>
 			</plugin>
 		</plugins>
