@@ -25,18 +25,16 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<cloudhubDeployment>
+					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>${app.runtime}</muleVersion>>
-				        <username>rahimsuae86</username>
+						<username>rahimsuae86</username>
 						<password>Emirates@2026</password>
-						<applicationName>mule-ci-cd</applicationName>
 						<environment>Sandbox</environment>
-						<region>us-east-1</region>
-						<workers>1</workers>
+						<applicationName>mule-ci-cd</applicationName>
 						<workerType>Micro</workerType>
+						<workers>1</workers>
 						<objectStoreV2>true</objectStoreV2>
-					</cloudhubDeployment>
+					</cloudHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
