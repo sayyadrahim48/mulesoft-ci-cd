@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="80631bd8-1aee-4f1f-af14-f987d2f63f50" >
+		<http:listener-connection host="0.0.0.0" port="8081" />
+	</http:listener-config>
+	<flow name="mule-ci-cdFlow" doc:id="16a9d148-5121-4986-bedf-dec0011a4e9c" >
+		<http:listener doc:name="Listener" doc:id="97877f78-0958-4edd-aee5-c1cc72b9f42c" config-ref="HTTP_Listener_config" path="/mule-cicd"/>
+		<logger level="INFO" doc:name="Logger" doc:id="aed044df-3cea-4673-97fc-2fab6c3c10f8" message="inside main flow"/>
+		<ee:transform doc:name="Transform Message" doc:id="527b9a98-fe7c-4b92-a5de-4def3050866d" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	currentDateTime:now()
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</flow>
+</mule>
