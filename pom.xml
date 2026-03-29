@@ -29,7 +29,6 @@
 						<uri>https://anypoint.mulesoft.com</uri>
 						<provider>MC</provider>
 						<environment>Sandbox</environment>
-						<target>CloudHub-US-East-2</target>
 						<!-- This is the Space/Region -->
 						<muleVersion>4.7.0</muleVersion>
 						<applicationName>mule-ci-cd</applicationName>
