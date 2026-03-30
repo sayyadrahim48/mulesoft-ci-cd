@@ -10,8 +10,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<app.runtime>4.11.0</app.runtime>
-		<mule.maven.plugin.version>4.7.0</mule.maven.plugin.version>
+		<app.runtime>4.9.0</app.runtime>
+		<mule.maven.plugin.version>4.3.0</mule.maven.plugin.version>
 		<tags/>
 		<categories>[]</categories>
 		<fields>[]</fields>
@@ -35,7 +35,7 @@
 						<environment>Sandbox</environment>
 						<target>Cloudhub-US-East-2</target>
 						<!-- This is the Space/Region -->
-						<muleVersion>4.7.0</muleVersion>
+						<muleVersion>4.9.0</muleVersion>
 						<applicationName>mule-ci-cd</applicationName>
 						<replicas>1</replicas>
 						<vCores>0.1</vCores>
@@ -43,6 +43,7 @@
 						<username>rahimsuae86</username>
 						<password>Emirates@2026</password>
 					</cloudhub2Deployment>
+					<classifier>---- select project type ----</classifier>
 				</configuration>
 			</plugin>
 		</plugins>
